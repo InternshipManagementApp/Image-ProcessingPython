@@ -1,6 +1,8 @@
 import cv2, numpy 
 import pytesseract
 import os
+from configparser import ConfigParser
+import logging
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Anita\AppData\Local\Programs\Tesseract-OCR\tesseract.exe' 
 
@@ -22,6 +24,7 @@ def getNumberFromImage(image): #tesseract
   return pytesseract.image_to_string(image, lang='eng', config='--psm 13 --oem 3 -c tessedit_char_whitelist=0123456789') 
 
 def main():
+  logging.basicConfig(filename="log.txt", level=logging.DEBUG,format="%(asctime)s %(message)s")
   folderName = "ImagesClock"
   if os.path.exists("result.txt"):
     os.remove("result.txt")
@@ -38,6 +41,13 @@ def main():
     text = getNumberFromImage(image)
     file.write(imageName + " " +text)
     #print(text)
-  
-    
+  #Read config.ini file
+  config_object = ConfigParser()
+  config_object.read("config.ini")
+
+  #Get the password
+  account = config_object["ACCOUNT"]
+  print("Status is: ", account["status"])
+  #logtest
+  logging.debug("Logging test...")  
 main()
