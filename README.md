@@ -11,4 +11,5 @@ Notice the (venv) in the cmd line.
 # Install requirments
 ```pip install -r requirments.txt```
 
-# For pysimplegui you must install tk 
+# For pysimplegui you must install tk - Linux
+sudo apt-get install python3-tk

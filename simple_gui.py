@@ -12,6 +12,12 @@ from configparser import ConfigParser
 class SimpleGui():
     def __init__(self, config):
         self.config = config
+        self.height = self.config.getint('DISPLAY_HEIGHT')
+        self.width = self.config.getint('DISPLAY_WIDTH')
+
+        # Prepare a blank image
+        self.frame = np.zeros((self.height, self.width, 3), np.uint8)
+
         # sg.theme('Black')
 
         self.button_name = 'Close'
@@ -58,13 +64,11 @@ class SimpleGui():
             if event == self.button_name or event == sg.WIN_CLOSED:
                 self.started = False
                 break
+            
+            some_text = f"this is a text"
+            font = cv2.FONT_HERSHEY_DUPLEX
 
-            current_time = time.perf_counter()
-            elapsed_time = current_time - self.previous_time
-            self.previous_time = current_time
-
-            if elapsed_time > 0:
-                cv2.putText(frame, "this is a text", (10, 20), font, 0.4, (255, 255, 255), 1)
+            cv2.putText(frame, some_text, (10, 20), font, 0.4, (255, 255, 255), 1)
 
             img_bytes = cv2.imencode(".png", frame)[1].tobytes()
             self.window["image_box"].update(data=img_bytes)
@@ -80,7 +84,7 @@ def main():
     display = SimpleGui(config)
     display.start()
 
-    frame = cv2.imread(Path("ImagesClock/IMG20231003125035.jpg"))
+    frame = cv2.imread("ImagesClock/IMG20231003125035.jpg")
     while display.started:
         
         display.show(frame)
