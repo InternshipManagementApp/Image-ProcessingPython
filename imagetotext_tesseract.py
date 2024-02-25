@@ -6,6 +6,7 @@ from configparser import ConfigParser
 import logging.config
 from pathlib import Path 
 import utils
+import time
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Anita\AppData\Local\Programs\Tesseract-OCR\tesseract.exe' 
 
@@ -52,13 +53,17 @@ def main():
   for imagePath in imagesPath:
     #pre process tesseract
     objOfImage = ImageToText(cv2.imread(str(imagePath)))
+    startTime = time.time()
     binaryImage = objOfImage.preprocess()
     
-    cv2.imshow(str(imagePath), binaryImage)
-    cv2.waitKey(0)
+    #cv2.imshow(str(imagePath), binaryImage)
+    #cv2.waitKey(0)
     
     text = objOfImage.getNumberFromImage(config)
-    outputFile.write(str(imagePath) + " " +text)
+    text = text.replace("\n", "")
+    endTime = time.time()
+    ellapsedSeconds = endTime - startTime
+    outputFile.write(str(imagePath) + " " + text + " " + str(round(ellapsedSeconds,3)) + "\n")
   logging.debug("Logging test...")  
 
 
