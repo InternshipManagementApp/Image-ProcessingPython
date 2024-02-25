@@ -16,13 +16,12 @@ class ImageToText:
     
   def preprocess(self):
     grayImage = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
-    grayImage = cv2.medianBlur(grayImage,5)
     _, binaryImage = cv2.threshold(grayImage, 0, 255, cv2.THRESH_OTSU)
     binaryImage = utils.invertBlackAndWhite(binaryImage)
     erodeImg = utils.erode(binaryImage)
-    dilateImg = utils.dilate(erodeImg)
-    openingImg = utils.opening(dilateImg)
-    return openingImg
+    #dilateImg = utils.dilate(binaryImage)
+    #openingImg = utils.opening(binaryImage)
+    return erodeImg
 
   def getTheImage(self):
     return self.image
@@ -56,8 +55,8 @@ def main():
     startTime = time.time()
     binaryImage = objOfImage.preprocess()
     
-    #cv2.imshow(str(imagePath), binaryImage)
-    #cv2.waitKey(0)
+    cv2.imshow(str(imagePath), binaryImage)
+    cv2.waitKey(0)
     
     text = objOfImage.getNumberFromImage(config)
     text = text.replace("\n", "")

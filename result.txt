@@ -1,8 +1,50 @@
-ImagesClock\IMG-20231127-WA0001.jpg 061672
-ImagesClock\IMG20231003125035.jpg 0610071
-ImagesClock\IMG20231003125134.jpg 6100
-ImagesClock\IMG20231005112239.jpg 0061071
-ImagesClock\IMG20231011112228.jpg 00510837
-ImagesClock\IMG20231011112253.jpg 010837
-ImagesClock\IMG20231011112318.jpg 00510837
-ImagesClock\JUNNJ.jpg 3283084
+ImagesClock\1.jpg 061672 1.288
+ImagesClock\10.jpg 00510837 0.969
+ImagesClock\11.jpg 010837 1.095
+ImagesClock\12.jpg 010837 1.166
+ImagesClock\13.jpg 00510837 0.35
+ImagesClock\14.jpg 00510837 0.349
+ImagesClock\15.jpg 0610071 0.392
+ImagesClock\16.jpg 028187 0.411
+ImagesClock\17.jpg 2818 0.472
+ImagesClock\18.jpg 025 0.612
+ImagesClock\19.jpg 29989 0.446
+ImagesClock\2.jpg 061672 0.276
+ImagesClock\20.jpg 2 0.343
+ImagesClock\21.jpg 0527 0.383
+ImagesClock\22.jpg 2915 0.447
+ImagesClock\23.jpg 00510837 0.339
+ImagesClock\24.jpg 028187 0.434
+ImagesClock\25.jpg 2818 0.477
+ImagesClock\26.jpg 025 0.612
+ImagesClock\27.jpg 29989 0.433
+ImagesClock\28.jpg 2 0.313
+ImagesClock\29.jpg 0527 0.384
+ImagesClock\3.jpg 0610071 0.41
+ImagesClock\30.jpg 2915 0.446
+ImagesClock\31.jpg 05277 0.473
+ImagesClock\32.jpg 052977 0.434
+ImagesClock\33.jpg 852517 0.46
+ImagesClock\34.jpg 100529 0.387
+ImagesClock\35.jpg 2052977 1.096
+ImagesClock\36.jpg 0529570 0.676
+ImagesClock\37.jpg 2 0.684
+ImagesClock\38.jpg 629518 0.607
+ImagesClock\39.jpg 029570 0.657
+ImagesClock\4.jpg 0610071 0.858
+ImagesClock\40.jpg 2052977 1.086
+ImagesClock\41.jpg 05277 1.563
+ImagesClock\42.jpg 052977 1.403
+ImagesClock\43.jpg 852517 0.865
+ImagesClock\44.jpg 100529 2.808
+ImagesClock\45.jpg 952970 1.242
+ImagesClock\46.jpg 0529570 1.516
+ImagesClock\47.jpg 2 0.92
+ImagesClock\48.jpg 629518 0.952
+ImagesClock\49.jpg 029570 0.811
+ImagesClock\5.jpg 6100 1.185
+ImagesClock\50.jpg 952970 2.403
+ImagesClock\6.jpg 6100 1.26
+ImagesClock\7.jpg 0061071 3.635
+ImagesClock\8.jpg 0061071 0.996
+ImagesClock\9.jpg 00510837 0.81
