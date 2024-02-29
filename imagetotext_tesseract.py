@@ -55,8 +55,8 @@ def main():
     startTime = time.time()
     binaryImage = objOfImage.preprocess()
     
-    cv2.imshow(str(imagePath), binaryImage)
-    cv2.waitKey(0)
+    #cv2.imshow(str(imagePath), binaryImage)
+    #cv2.waitKey(0)
     
     text = objOfImage.getNumberFromImage(config)
     text = text.replace("\n", "")
