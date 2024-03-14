@@ -26,6 +26,9 @@ class ImageToText:
   def getTheImage(self):
     return self.image
     
+  def setTheImage(self, img):
+    self.image = img
+    
   def getNumberFromImage(self, config): #tesseract
     #configuration: it will read only the specified language and for what to look for
     return pytesseract.image_to_string(self.image, lang=config['TESS_LANGUAGE'], 
@@ -52,6 +55,9 @@ def main():
   for imagePath in imagesPath:
     #pre process tesseract
     objOfImage = ImageToText(cv2.imread(str(imagePath)))
+    #objOfImage.setTheImage(utils.addNoise(objOfImage.getTheImage()))
+    #cv2.imshow("e",objOfImage.image)
+    #cv2.waitKey(0)
     startTime = time.time()
     binaryImage = objOfImage.preprocess()
     

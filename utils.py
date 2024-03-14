@@ -19,3 +19,11 @@ def erode(image):
 def opening(image):
   kernel = numpy.ones((5,5),numpy.uint8)
   return cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+  
+def addNoise(image):
+    mean = -10 #with what intensity does noise appear on the image on average
+    stddev = 35 #how much noisy will be the image
+    noise = numpy.zeros(image.shape, numpy.uint8) #noise map
+    cv2.randn(noise, mean, stddev) #generate noise
+    noisy_img = cv2.add(image, noise)
+    return noisy_img
