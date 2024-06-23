@@ -27,3 +27,9 @@ def addNoise(image):
     cv2.randn(noise, mean, stddev) #generate noise
     noisy_img = cv2.add(image, noise)
     return noisy_img
+    
+def addBrightness(image):
+    alpha = 1.0  # original image weight
+    beta = -120    # value of brightness
+    bright_image = cv2.addWeighted(image, alpha, numpy.zeros(image.shape, image.dtype), 0, beta)
+    return bright_image

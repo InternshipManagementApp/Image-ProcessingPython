@@ -56,8 +56,10 @@ def main():
     #pre process tesseract
     objOfImage = ImageToText(cv2.imread(str(imagePath)))
     #objOfImage.setTheImage(utils.addNoise(objOfImage.getTheImage()))
+    #objOfImage.setTheImage(utils.addBrightness(objOfImage.getTheImage()))
     #cv2.imshow("e",objOfImage.image)
     #cv2.waitKey(0)
+    
     startTime = time.time()
     binaryImage = objOfImage.preprocess()
     
@@ -69,7 +71,7 @@ def main():
     endTime = time.time()
     ellapsedSeconds = endTime - startTime
     outputFile.write(str(imagePath) + " " + text + " " + str(round(ellapsedSeconds,3)) + "\n")
-  logging.debug("Logging test...")  
+  logging.debug("Logging test...")
 
 
 if __name__ == '__main__':
